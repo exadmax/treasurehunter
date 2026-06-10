@@ -1,0 +1,35 @@
+{
+    "name": "Caça ao Tesouro",
+    "short_name": "Tesouro",
+    "start_url": ".",
+    "display": "standalone",
+    "background_color": "#FFF8E1",
+    "theme_color": "#FFB703",
+    "description": "Caça ao Tesouro com QR Code para crianças",
+    "orientation": "portrait-primary",
+    "prefer_related_applications": false,
+    "icons": [
+        {
+            "src": "icons/Icon-192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "icons/Icon-512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        },
+        {
+            "src": "icons/Icon-maskable-192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "maskable"
+        },
+        {
+            "src": "icons/Icon-maskable-512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "maskable"
+        }
+    ]
+}

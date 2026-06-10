@@ -1,0 +1,26 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Hunts collection – publicly readable, no auth required (kiosk-style PWA).
+    // Only the admin flow creates/updates hunts and subcollections.
+    // In a production deployment you should protect admin writes with
+    // Firebase Authentication (e.g. a simple email/password admin account).
+
+    match /hunts/{huntId} {
+      allow read: if true;
+      allow write: if true;   // TODO: restrict to authenticated admin
+
+      match /treasures/{treasureId} {
+        allow read: if true;
+        allow write: if true;
+      }
+
+      match /hunters/{hunterId} {
+        allow read: if true;
+        allow write: if true;
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+rules_version = '2';
+
+service firebase.storage {
+  match /b/{bucket}/o {
+    match /{allPaths=**} {
+      // Allow read by anyone (images are used in the app without auth)
+      allow read: if true;
+      // Allow write (upload/delete) by anyone for this kiosk-style app.
+      // TODO: in production, restrict writes to authenticated sessions.
+      allow write: if true;
+    }
+  }
+}
